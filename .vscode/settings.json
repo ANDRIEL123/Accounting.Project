@@ -1,0 +1,6 @@
+{
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin/Release/net7.0/publish"
+}
