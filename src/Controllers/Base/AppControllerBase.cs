@@ -1,8 +1,8 @@
-using Child.Growth.src.Infra.Responses;
+using Accounting.Project.src.Infra.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Child.Growth.src.Controllers.Base
+namespace Accounting.Project.src.Controllers.Base
 {
     [Route("[api]")]
     public class AppControllerBase : Controller

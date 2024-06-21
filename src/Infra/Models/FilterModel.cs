@@ -1,4 +1,4 @@
-namespace Child.Growth.src.Infra.Models
+namespace Accounting.Project.src.Infra.Models
 {
     public class FilterModel
     {

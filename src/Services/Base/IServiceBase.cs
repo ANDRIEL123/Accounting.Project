@@ -1,6 +1,6 @@
-using Child.Growth.src.Infra.Responses;
+using Accounting.Project.src.Infra.Responses;
 
-namespace Child.Growth.src.Services.Base
+namespace Accounting.Project.src.Services.Base
 {
     public interface IServiceBase<T>
     {

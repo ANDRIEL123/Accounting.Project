@@ -1,4 +1,4 @@
-namespace Child.Growth.src.Infra.DTO
+namespace Accounting.Project.src.Infra.DTO
 {
     public class ComparativeAveragePercentileDTO
     {

@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Accounting.Project.src.Infra.Enums;
-using Child.Growth.src.Entities.Base;
+using Accounting.Project.src.Entities.Base;
 
-namespace Child.Growth.src.Entities
+namespace Accounting.Project.src.Entities
 {
     /// <summary>
     /// Pessoas
@@ -37,6 +37,12 @@ namespace Child.Growth.src.Entities
         /// Tipo de pessoa Cliente/Fornecedor
         /// </summary>
         [Column("type")]
-        public PeopleType Type { get; set; }
+        public PeopleTypeEnum Type { get; set; }
+
+        #region Collections
+
+        public virtual ICollection<Notes> Notes { get; set; }
+
+        #endregion Collections
     }
 }

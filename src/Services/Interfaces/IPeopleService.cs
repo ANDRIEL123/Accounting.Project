@@ -1,10 +1,11 @@
-using Child.Growth.src.Entities;
-using Child.Growth.src.Services.Base;
+using Accounting.Project.src.Entities;
+using Accounting.Project.src.Infra.Responses;
+using Accounting.Project.src.Services.Base;
 
-namespace Child.Growth.src.Services.Interfaces
+namespace Accounting.Project.src.Services.Interfaces
 {
     public interface IPeopleService : IServiceBase<People>
     {
-
+        ResponseBody GetOptions();
     }
 }

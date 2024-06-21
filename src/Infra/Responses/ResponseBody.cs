@@ -1,4 +1,4 @@
-namespace Child.Growth.src.Infra.Responses
+namespace Accounting.Project.src.Infra.Responses
 {
     public class ResponseBody
     {

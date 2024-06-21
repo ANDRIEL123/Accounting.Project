@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Child.Growth.src.Entities;
+using Accounting.Project.src.Entities;
 
-namespace Child.Growth.src.Mappings
+namespace Accounting.Project.src.Mappings
 {
     public class PeopleMapping : IEntityTypeConfiguration<People>
     {

@@ -1,10 +1,10 @@
-using Child.Growth.src.Entities.Base;
-using Child.Growth.src.Infra.Data.UnitOfWork;
-using Child.Growth.src.Infra.Exceptions;
-using Child.Growth.src.Infra.Responses;
-using Child.Growth.src.Repositories.Base;
+using Accounting.Project.src.Entities.Base;
+using Accounting.Project.src.Infra.Data.UnitOfWork;
+using Accounting.Project.src.Infra.Exceptions;
+using Accounting.Project.src.Infra.Responses;
+using Accounting.Project.src.Repositories.Base;
 
-namespace Child.Growth.src.Services.Base
+namespace Accounting.Project.src.Services.Base
 {
     public class ServiceBase<T> : IServiceBase<T> where T : EntityBase
     {

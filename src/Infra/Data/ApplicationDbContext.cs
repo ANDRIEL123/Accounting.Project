@@ -1,7 +1,7 @@
-using Child.Growth.src.Infra.DependencyInjection;
+using Accounting.Project.src.Infra.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 
-namespace Child.Growth.src.Infra.Data
+namespace Accounting.Project.src.Infra.Data
 {
     public class ApplicationDbContext : DbContext
     {

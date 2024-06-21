@@ -1,14 +1,17 @@
-using Child.Growth.src.Services.Implementations;
-using Child.Growth.src.Services.Interfaces;
+using Accounting.Project.src.Services.Implementations;
+using Accounting.Project.src.Services.Interfaces;
 
-namespace Child.Growth.src.Infra.DependencyInjection
+namespace Accounting.Project.src.Infra.DependencyInjection
 {
     public class InjectServices
     {
         public static void AddServices(IServiceCollection services)
         {
-            services.AddScoped<IProductsService, ProductsService>();
+            services.AddScoped<IAssetsService, AssetsService>();
             services.AddScoped<IPeopleService, PeopleService>();
+            services.AddScoped<IAccountsService, AccountsService>();
+            services.AddScoped<IReleasesService, ReleasesService>();
+            services.AddScoped<INotesService, NotesService>();
         }
     }
 }

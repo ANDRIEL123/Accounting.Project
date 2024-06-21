@@ -1,10 +1,10 @@
-using Child.Growth.src.Controllers.Base;
-using Child.Growth.src.Entities;
-using Child.Growth.src.Infra.Responses;
-using Child.Growth.src.Services.Interfaces;
+using Accounting.Project.src.Controllers.Base;
+using Accounting.Project.src.Entities;
+using Accounting.Project.src.Infra.Responses;
+using Accounting.Project.src.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Child.Growth.src.Controllers
+namespace Accounting.Project.src.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -28,9 +28,14 @@ namespace Child.Growth.src.Controllers
         [HttpGet("GetByFilters")]
         public List<People> GetByFilters(string filters)
         {
-            var PeopleByFilter = _peopleService.GetByFilters(filters);
+            return _peopleService.GetByFilters(filters);
+        }
 
-            return PeopleByFilter;
+        [HttpGet("GetOptions")]
+        public ResponseBody GetOptions()
+        {
+            return _peopleService
+                .GetOptions();
         }
 
         [HttpPost]

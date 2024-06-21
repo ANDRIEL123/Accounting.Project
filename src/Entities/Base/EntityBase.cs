@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Child.Growth.src.Entities.Base
+namespace Accounting.Project.src.Entities.Base
 {
     public class EntityBase
     {

@@ -1,11 +1,11 @@
 using System.Linq.Expressions;
-using Child.Growth.src.Infra.Data;
-using Child.Growth.src.Infra.Models;
+using Accounting.Project.src.Infra.Data;
+using Accounting.Project.src.Infra.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Newtonsoft.Json;
 
-namespace Child.Growth.src.Repositories.Base
+namespace Accounting.Project.src.Repositories.Base
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
@@ -26,11 +26,19 @@ namespace Child.Growth.src.Repositories.Base
             return _context.Set<TEntity>().ToList();
         }
 
-        public IEnumerable<TEntity> Query(Expression<Func<TEntity, bool>> filterExpression)
+        public IEnumerable<TEntity> Query(
+            Expression<Func<TEntity, bool>> filterExpression,
+            params Expression<Func<TEntity, object>>[] includes
+        )
         {
-            return _context.Set<TEntity>()
-                .Where(filterExpression)
-                .AsQueryable();
+            IQueryable<TEntity> query = _context.Set<TEntity>().Where(filterExpression);
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return query.AsEnumerable();
         }
 
         public IEnumerable<TEntity> GetByFilters(string filters)

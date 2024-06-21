@@ -1,10 +1,10 @@
-using Child.Growth.src.Infra.Data;
-using Child.Growth.src.Infra.Data.UnitOfWork;
-using Child.Growth.src.Infra.DependencyInjection;
-using Child.Growth.src.Repositories.Base;
+using Accounting.Project.src.Infra.Data;
+using Accounting.Project.src.Infra.Data.UnitOfWork;
+using Accounting.Project.src.Infra.DependencyInjection;
+using Accounting.Project.src.Repositories.Base;
 using Microsoft.EntityFrameworkCore;
 
-namespace Child.Growth
+namespace Accounting.Project
 {
     public class Startup
     {

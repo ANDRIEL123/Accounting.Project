@@ -1,4 +1,4 @@
-namespace Child.Growth.src.Infra.Data.UnitOfWork
+namespace Accounting.Project.src.Infra.Data.UnitOfWork
 {
     public interface IUnitOfWork
     {

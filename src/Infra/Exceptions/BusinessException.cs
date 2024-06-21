@@ -1,4 +1,4 @@
-namespace Child.Growth.src.Infra.Exceptions
+namespace Accounting.Project.src.Infra.Exceptions
 {
     public class BusinessException : Exception
     {
