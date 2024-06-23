@@ -28,6 +28,12 @@ namespace Accounting.Project.src.Entities
         public AccountType Type { get; set; }
 
         /// <summary>
+        /// Circulante
+        /// </summary>
+        [Column("current")]
+        public CurrentTypeEnum? Current { get; set; }
+
+        /// <summary>
         /// Id da conta contábil
         /// </summary>
         [Column("match_account_id")]

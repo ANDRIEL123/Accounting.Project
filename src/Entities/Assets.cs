@@ -28,7 +28,7 @@ namespace Accounting.Project.src.Entities
         public decimal? SellingPrice { get; set; } = 0;
 
         /// <summary>
-        /// Preço de venda
+        /// Tipo
         /// </summary>
         [Column("type")]
         public AssetsTypeEnum Type { get; set; }

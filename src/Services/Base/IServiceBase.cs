@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using Accounting.Project.src.Infra.Responses;
 
 namespace Accounting.Project.src.Services.Base
@@ -15,5 +16,10 @@ namespace Accounting.Project.src.Services.Base
         ResponseBody GetAll();
 
         List<T> GetByFilters(string filters);
+
+        IEnumerable<T> Query(
+            Expression<Func<T, bool>> filterExpression,
+            params Expression<Func<T, object>>[] includes
+        );
     }
 }

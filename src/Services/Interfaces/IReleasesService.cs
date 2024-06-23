@@ -5,6 +5,6 @@ namespace Accounting.Project.src.Services.Interfaces
 {
     public interface IReleasesService : IServiceBase<Releases>
     {
-
+        object PatrimonyBalance();
     }
 }

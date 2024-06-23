@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using Accounting.Project.src.Entities.Base;
 using Accounting.Project.src.Infra.Data.UnitOfWork;
 using Accounting.Project.src.Infra.Exceptions;
@@ -43,6 +44,14 @@ namespace Accounting.Project.src.Services.Base
                 Message = "Registro localizado com sucesso.",
                 Content = _repository.GetById(id)
             };
+        }
+
+        public IEnumerable<T> Query(
+            Expression<Func<T, bool>> filterExpression,
+            params Expression<Func<T, object>>[] includes
+        )
+        {
+            return _repository.Query(filterExpression, includes);
         }
 
         public ResponseBody Create(T entity)

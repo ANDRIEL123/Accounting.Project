@@ -21,7 +21,7 @@ namespace Accounting.Project.src.Services.Implementations
 
         public ResponseBody GetOptions()
         {
-            var responsible = _repository
+            var people = _repository
                 .GetAll()
                 .Select(x => new
                 {
@@ -33,7 +33,7 @@ namespace Accounting.Project.src.Services.Implementations
             return new ResponseBody
             {
                 Code = 200,
-                Content = responsible
+                Content = people
             };
         }
     }

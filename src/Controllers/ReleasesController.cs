@@ -31,6 +31,12 @@ namespace Accounting.Project.src.Controllers
             return _releasesService.GetByFilters(filters);
         }
 
+        [HttpGet("GetPatrimonyBalance")]
+        public object GetPatrimonyBalance()
+        {
+            return _releasesService.PatrimonyBalance();
+        }
+
         [HttpPost]
         public ResponseBody Create([FromBody] Releases entity)
         {
