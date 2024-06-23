@@ -127,7 +127,7 @@ namespace Accounting.Project.src.Services.Implementations
                 .Select(x => x.Id)
                 .FirstOrDefault();
 
-            var icmsRecovery = note.Asset.SellingPrice ?? 0 * 0.17m;
+            var icmsRecovery = (note.Asset.SellingPrice ?? 0) * 0.17m;
 
             // Debita na conta a recolher
             var creditRelease = new Releases
